@@ -26,7 +26,7 @@ public class TwoSum {
 	//better appraoch
 	public static void main(String arg[]) {
 
-		int[] array = { 8,102,11 ,5,8,2,9,7 };
+		int[] array = { 8,102,11 ,5,8,3,111,2,9,7 };
 
 		int target = 9;
 		
@@ -34,11 +34,11 @@ public class TwoSum {
 		
 		int[] result = new int[2];
 		
-		for(int i= 0; i < array.length;i++){
-			System.out.println(hashMap.containsKey(array[i])+"asdad");
+		for(int i= 1; i < array.length;i++){
+			//System.out.println(hashMap.containsKey(array[i])+"asdad");
 			if (hashMap.containsKey(array[i])) {
 				int index = hashMap.get(array[i]);
-				System.out.println(index+"Sss"+array[i]);
+				//System.out.println(index+"Sss"+array[i]);
 				result[0] = index+1 ;
 				result[1] = i+1;
 				break;
