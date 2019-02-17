@@ -1,4 +1,6 @@
-package org.learnlogic.model;
+package org.learnlogic.linkedlist;
+
+import org.learnlogic.linkedlist.*;
 
 public class ReverseLinkedList {
 

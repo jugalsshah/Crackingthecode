@@ -1,4 +1,5 @@
-package org.learnlogic.model;
+package org.learnlogic.linkedlist;
+
 
 public class MergeTwoSortedLinkedList {
 	private LinkedListT a;

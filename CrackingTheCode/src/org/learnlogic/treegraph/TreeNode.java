@@ -1,12 +1,12 @@
 package org.learnlogic.treegraph;
 
-public class Node<T> {
+public class TreeNode {
 
-	public Node left;
-	public Node right;
+	public TreeNode left;
+	public TreeNode right;
 	public int value;
 	
-	public Node(int value){
+	public TreeNode(int value){
 		
 		this.value=value;
 		right=null;

@@ -15,7 +15,7 @@ public class PermutationString {
 		for(int i=0;i<s1.length();i++){
 			char c = s1.charAt(i);
 			if(ht.containsKey(c)){	
-				int val = ht.get(c) + 1;
+				int val = ht.get(c)+1;
 				ht.put(c, val);
 			}else{
 				ht.put(c, 1);

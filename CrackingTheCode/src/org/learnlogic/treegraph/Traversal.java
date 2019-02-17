@@ -2,37 +2,37 @@ package org.learnlogic.treegraph;
 
 public class Traversal {
 	// @SuppressWarnings("rawtypes")
-		public Node root;
+		public TreeNode root;
 
 		@SuppressWarnings("unchecked")
 		public void insert(int value) {
-			Node node = new Node<>(value);
+			TreeNode treeNode = new TreeNode(value);
 
 			if (root == null) {
-				root = node;
+				root = treeNode;
 				return;
 			}
-			insertRec(root, node);
+			insertRec(root, treeNode);
 		}
 
-		public void insertRec(Node latestroot, Node node) {
-			if (latestroot.value > node.value) {
+		public void insertRec(TreeNode latestroot, TreeNode treeNode) {
+			if (latestroot.value > treeNode.value) {
 				if (latestroot.left == null) {
 
-					latestroot.left = node;
+					latestroot.left = treeNode;
 					return;
 				} else {
-					insertRec(latestroot.left, node);
+					insertRec(latestroot.left, treeNode);
 				}
 
 			} else {
 
 				if (latestroot.right == null) {
 
-					latestroot.right = node;
+					latestroot.right = treeNode;
 					return;
 				} else {
-					insertRec(latestroot.right, node);
+					insertRec(latestroot.right, treeNode);
 				}
 
 			}
@@ -45,7 +45,7 @@ public class Traversal {
 
 		}
 
-		public void inorder(Node currentNode) {
+		public void inorder(TreeNode currentNode) {
 
 			if (currentNode == null) {
 
@@ -61,7 +61,7 @@ public class Traversal {
 			preorder(root);
 		}
 
-		public void preorder(Node currentNode) {
+		public void preorder(TreeNode currentNode) {
 			if (currentNode == null) {
 
 				return;
@@ -80,7 +80,7 @@ public class Traversal {
 
 		}
 
-		public void postorder(Node currentNode) {
+		public void postorder(TreeNode currentNode) {
 
 			if (currentNode == null) {
 

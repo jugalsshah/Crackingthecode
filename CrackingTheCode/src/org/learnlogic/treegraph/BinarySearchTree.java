@@ -4,7 +4,7 @@ package org.learnlogic.treegraph;
 
 public class BinarySearchTree {
 
-	public static Node root;
+	public static TreeNode root;
 	public BinarySearchTree(){
 		
 		this.root=null;		
@@ -13,16 +13,16 @@ public class BinarySearchTree {
 	
 	public void insert(int data){
 	
-		Node node= new Node(data);
+		TreeNode treeNode= new TreeNode(data);
 		if(root==null){
 			
-			root=node;
+			root=treeNode;
 			return;
 			
 		}
 		
-		Node currentnode=root;
-		Node parentnode= null;
+		TreeNode currentnode=root;
+		TreeNode parentnode= null;
 		while(true){
 			parentnode=currentnode;
 			if(data<currentnode.value){
@@ -30,7 +30,7 @@ public class BinarySearchTree {
 				currentnode=currentnode.left;
 				if(currentnode==null){
 					
-					parentnode.left=node;
+					parentnode.left=treeNode;
 					return;
 					
 				}			
@@ -39,7 +39,7 @@ public class BinarySearchTree {
 				currentnode=currentnode.right;
 				if(currentnode==null){
 					
-					parentnode.right=node;
+					parentnode.right=treeNode;
 					return;
 							
 				}
@@ -51,7 +51,7 @@ public class BinarySearchTree {
 				
 	}
 
-	public void display(Node root){
+	public void display(TreeNode root){
 		if(root!=null){
 			display(root.left);
 			System.out.print(" " + root.value);
@@ -61,24 +61,24 @@ public class BinarySearchTree {
 	
 	public boolean delete(int data){
 		
-		Node currentndoe=root;
-		Node parentnode=root;
+		TreeNode currentndoe=root;
+		TreeNode parentnode=root;
 		
 		
 			return false;
 	}
 	
 	public boolean find(int data){
-		Node node= root;
-		while(node!=null){
-			if(node.value==data){
+		TreeNode treeNode= root;
+		while(treeNode!=null){
+			if(treeNode.value==data){
 				return true;				
 			}
-			else if(node.value>data){
-				node=node.left;
+			else if(treeNode.value>data){
+				treeNode=treeNode.left;
 			}
 			else{
-				node=node.right;
+				treeNode=treeNode.right;
 				
 			}
 			
